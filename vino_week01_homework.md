@@ -1,18 +1,18 @@
 # week01 homework
 #honework
-The program is base on the rule of ‘simonsays’.
-The green LED represents ’simonsays’.
-And the red & orange LED represent two actions.
-Unfortunately I found that the bread board had no more extra space to capacity 3 switch and more LEDS.(I think maybe I can use the other side of the bread board but the wires will tangle together.)
-Here is the coding part.
-press two switch in the same time to start the game.
-If game over, the green LED will keep flashing.
-And if the game start, the LED(pin13) will turn on.
-Only when the green LED and arbitrarily light on then be allowed to press the switch.
-If the green LED didn’t on but any switch be turned on, then lost.(keep waiting for just a second to skip the green LED)
-All the LED will be turn on randomly during the game is running.
-Below is the coding part.
-And here is the video link:[vino_week01_homework on Vimeo](https://vimeo.com/364530183)
+The program is base on the rule of ‘simonsays’.<br>
+The green LED represents ’simonsays’.<br>
+And the red & orange LED represent two actions.<br>
+Unfortunately I found that the bread board had no more extra space to capacity 3 switch and more LEDS.(I think maybe I can use the other side of the bread board but the wires will tangle together.)<br>
+Here is the coding part.<br>
+press two switch in the same time to start the game.<br>
+If game over, the green LED will keep flashing.<br>
+And if the game start, the LED(pin13) will turn on.<br>
+Only when the green LED and arbitrarily light on then be allowed to press the switch.<br>
+If the green LED didn’t on but any switch be turned on, then lost.(keep waiting for just a second to skip the green LED)<br>
+All the LED will be turn on randomly during the game is running.<br>
+Below is the coding part.<br>
+And here is the video link:[vino_week01_homework on Vimeo](https://vimeo.com/364530183)<br>
 - - - -
 ``` c
 int switchState1=0;
