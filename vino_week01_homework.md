@@ -13,6 +13,7 @@ If the green LED didn’t on but any switch be turned on, then lost.(keep waitin
 All the LED will be turn on randomly during the game is running.<br>
 Below is the coding part.<br>
 And here is the video link:[vino_week01_homework on Vimeo](https://vimeo.com/364530183)<br>
+< font color=red>color
 - - - -
 ``` c
 int switchState1=0;
