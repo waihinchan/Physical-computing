@@ -3,7 +3,6 @@
 The program is base on the rule of ‘simonsays’.<br>
 The green LED represents ’simonsays’.<br>
 And the red & orange LED represent two actions.<br>
-Unfortunately I found that the bread board had no more extra space to capacity 3 switch and more LEDS.(I think maybe I can use the other side of the bread board but the wires will tangle together.)<br>
 Here is the coding part.<br>
 press two switch in the same time to start the game.<br>
 If game over, the green LED will keep flashing.<br>
