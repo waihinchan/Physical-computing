@@ -13,87 +13,74 @@ All the LED will be turn on randomly during the game is running.<br>
 Below is the coding part.<br>
 And here is the video link:[vino_week01_homework on Vimeo](https://vimeo.com/364530183)<br>
 - - - -
-``` c
-int switchState1=0;
-int switchState2=0;
-
+#include <time.h>
+//时间头文件
+const int redled = 3;
+const int orgled = 5;
+const int greled = 2;
+const int buttonorg = 6;
+const int buttonred = 4;
+//定义各个零件的pin口//
+//const转换成常亮不可更改
+int gameover = 1;
+int simonsays = 1;
+int whichlighton = 0;//参数：随机控制哪一个灯是亮//
 void setup() {
-pinMode(6,OUTPUT);
-pinMode(4,OUTPUT);
-pinMode(5,OUTPUT);
-pinMode(2,INPUT);
-pinMode(8,INPUT);
+  pinMode(4,OUTPUT);
+  pinMode(3,OUTPUT);
+  pinMode(2,OUTPUT);
+  pinMode(5,INPUT);
+  pinMode(6,INPUT); 
+  pinMode(13,OUTPUT); 
 
 }
-
 void loop() {
-switchState2=digitalRead(2);
-switchState1=digitalRead(8);
+  if(gameover == 1){
+    whichlighton = rand()%2;
+    simonsays = rand()%2;
+    digitalWrite(redled,LOW);
+    digitalWrite(orgled,LOW);
+    digitalWrite(13,LOW); 
+    digitalWrite(greled,HIGH); 
+    delay(500);
+    digitalWrite(greled,LOW);
+    delay(500); 
+    } //gameover状态下led灯关闭，绿色灯不断闪烁
+    
+     if(digitalRead(buttonred) && digitalRead(buttonorg))
+  {
+    digitalWrite(13,HIGH);  
+    gameover = 0;
+    }
+  //如果两个按钮同时按下，则游戏开始，此时ganmeover状态变为0//
 
-if(switchState1==LOW)
-
-switch (switchState2){
- case LOW:  {
-  digitalWrite(4,HIGH); 
-digitalWrite(5,LOW);
-digitalWrite(6,LOW);
-delay(500);
-digitalWrite(4,LOW); 
-digitalWrite(5,HIGH);
-delay(500);
-digitalWrite(5,LOW);
-digitalWrite(6,HIGH);
-delay(500);
+  if(gameover == 0){
+    
+   if(simonsays == 1){
+    digitalWrite(whichlighton*2+3,HIGH);
+    digitalWrite(greled,HIGH);
+    if(digitalRead(whichlighton*2+3+1) == HIGH){
+      digitalWrite(whichlighton*2+3,LOW);
+      digitalWrite(greled,LOW);
+      whichlighton = rand()%2;
+      simonsays = rand()%2;
+      delay(2000);
+      }
+    if(whichlighton == 0 && digitalRead(6))
+    {gameover = 1;}
+    if(whichlighton == 1 && digitalRead(4))
+    {gameover = 1;}
+   }
+   if(simonsays == 0){
+    digitalWrite(whichlighton*2+3,HIGH);
+    digitalWrite(greled,LOW);
+    delay(500);
+    digitalWrite(redled,LOW);
+    digitalWrite(orgled,LOW);
+    whichlighton = rand()%2;
+    simonsays = rand()%2;  
+    if(digitalRead(buttonred)||digitalRead(buttonorg)){gameover = 1;} 
+    }
+    
+    }
 }
-
- case HIGH:{
-  digitalWrite(4,LOW);
-delay(250);
-digitalWrite(4,HIGH);
-delay(50);
- }
-} 
-
- 
-else if (switchState1==HIGH){
-  
-switch (switchState2){
- case LOW:  {
-  digitalWrite(4,LOW);
-delay(500);
-digitalWrite(4,HIGH);
-delay(500);
-digitalWrite(5,LOW);
-delay(500);
-digitalWrite(5,HIGH);
-delay(500);
-digitalWrite(6,LOW);
-delay(500);
-digitalWrite(6,HIGH);
-delay(500);
-
-}
-
- 
-case HIGH : {
- digitalWrite(4,HIGH);
-digitalWrite(5,HIGH);
-digitalWrite(6,HIGH);
-delay(200);
-
-digitalWrite(4,LOW);
-delay(50);
-digitalWrite(5,LOW); 
-delay(25);
-digitalWrite(6,LOW);
-delay(15);
-
-}
-
-return 0;
-}
-
- }
- 
-}
-```
