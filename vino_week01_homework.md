@@ -1,30 +1,30 @@
-# week01 homework
+# week01_homework
 #honework
-The program is base on the rule of ‘simonsays’.<br>
-The green LED represents ’simonsays’.<br>
-And the red & orange LED represent two actions.<br>
-Here is the coding part.<br>
-press two switch in the same time to start the game.<br>
-If game over, the green LED will keep flashing.<br>
-And if the game start, the LED(pin13) will turn on.<br>
-Only when the green LED and arbitrarily light on then be allowed to press the switch.<br>
-If the green LED didn’t on but any switch be turned on, then lost.(keep waiting for just a second to skip the green LED)<br>
-All the LED will be turn on randomly during the game is running.<br>
-Below is the coding part.<br>
-And here is the video link:[vino_week01_homework on Vimeo](https://vimeo.com/364530183)<br>
+The program is base on the rule of ‘simonsays’.
+The green LED represents ’simonsays’.
+And the red & orange LED represent two actions.
+Here is the coding part.
+press two switch in the same time to start the game.
+If game over, the green LED will keep flashing.
+And if the game start, the LED(pin13) will turn on.
+Only when the green LED and arbitrarily light on then be allowed to press the switch.
+If the green LED didn’t on but any switch be turned on, then lost.(keep waiting for just a second to skip the green LED)
+All the LED will be turn on randomly during the game is running.
+Below is the coding part.
+And here is the video link:[vino_week01_homework on Vimeo](https://vimeo.com/364530183)
 - - - -
+
+``` c
 #include <time.h>
-//时间头文件
+
 const int redled = 3;
 const int orgled = 5;
 const int greled = 2;
 const int buttonorg = 6;
 const int buttonred = 4;
-//定义各个零件的pin口//
-//const转换成常亮不可更改
 int gameover = 1;
 int simonsays = 1;
-int whichlighton = 0;//参数：随机控制哪一个灯是亮//
+int whichlighton = 0;
 void setup() {
   pinMode(4,OUTPUT);
   pinMode(3,OUTPUT);
@@ -45,14 +45,14 @@ void loop() {
     delay(500);
     digitalWrite(greled,LOW);
     delay(500); 
-    } //gameover状态下led灯关闭，绿色灯不断闪烁
+    } 
     
      if(digitalRead(buttonred) && digitalRead(buttonorg))
   {
     digitalWrite(13,HIGH);  
     gameover = 0;
     }
-  //如果两个按钮同时按下，则游戏开始，此时ganmeover状态变为0//
+
 
   if(gameover == 0){
     
@@ -84,3 +84,4 @@ void loop() {
     
     }
 }
+```
