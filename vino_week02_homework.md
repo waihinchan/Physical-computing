@@ -3,7 +3,7 @@
 
 ## LB00 **Leds in Serial and Parallel**
 ### Experiment procedure
-![](vino_week02_homework/IMG_3421.jpeg)
+![](https://tva1.sinaimg.cn/large/006y8mN6gy1g83ww3uvtnj31400u0e89.jpg)
 ### Result:
 1. The serial circuit can connect no more than 2 LED(according to the different resistor value the result may have different situation.)
 2. The parallel  circuit can connect over 6 and more LED.(Actually I think the amount would more than 6, depend on the power of the LEDS)
