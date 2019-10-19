@@ -43,7 +43,7 @@ void loop() {
 }
 ```
 
-![](vino_week02_homework/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-10-19%20%E4%B8%8B%E5%8D%883.06.42.png)
+![](https://tva1.sinaimg.cn/large/006y8mN6gy1g83ww4ca5ij30w60u0jzt.jpg)
 ### Expansion
 The difference between "serial.print" and "serial.write"
 ``` arduino
@@ -80,7 +80,7 @@ The different is the “print" sending the character, while the "write"  sending
 ## LB02 **Potentiometers (Knobs)**
 Base on [Arduino - Potentiometer](https://www.arduino.cc/en/tutorial/potentiometer)
 Video link: [Potentiometers (Knobs) on Vimeo](https://vimeo.com/367450355)
-![](https://tva1.sinaimg.cn/large/006y8mN6gy1g83ww4ca5ij30w60u0jzt.jpg)
+![](https://tva1.sinaimg.cn/large/006y8mN6gy1g83x06wakij30u0140u0y.jpg)
 - - - -
 ## LB03 **Light Dependent Resistors**
 
