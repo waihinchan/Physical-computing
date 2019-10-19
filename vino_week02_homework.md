@@ -80,12 +80,12 @@ The different is the “print" sending the character, while the "write"  sending
 ## LB02 **Potentiometers (Knobs)**
 Base on [Arduino - Potentiometer](https://www.arduino.cc/en/tutorial/potentiometer)
 Video link: [Potentiometers (Knobs) on Vimeo](https://vimeo.com/367450355)
-![](vino_week02_homework/6C7A6A74-2BC8-458E-AAFB-498EDE93193C.png)
+![](https://tva1.sinaimg.cn/large/006y8mN6gy1g83ww4ca5ij30w60u0jzt.jpg)
 - - - -
 ## LB03 **Light Dependent Resistors**
 
-![](vino_week02_homework/1430caf8-3eed-4c89-a186-e20e0a93575b.JPG)
+![](https://tva1.sinaimg.cn/large/006y8mN6gy1g83ww4vmb5j30u014045v.jpg)
 - - - -
 ## LB04 **Playing with Common Sensors**
 
-![](vino_week02_homework/6be48273-ee81-4730-a2aa-2d7d18f32004.JPG)
+![](https://tva1.sinaimg.cn/large/006y8mN6gy1g83ww5f2msj30u0140drs.jpg)
