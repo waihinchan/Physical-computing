@@ -1,13 +1,13 @@
 # vino_week03_homework
-#作业
+
 ## lb01
 Video link:[Playing with fades on Vimeo](https://vimeo.com/368996577)
-
+-----
 ## lb03
 videolink:[drak-detecting on Vimeo](https://vimeo.com/368999267)
 **Process:**
 Base on the schematic I hook up the circuit. But I failed for many times.
-
+https://i0.wp.com/cdn.makezine.com/uploads/2014/10/wp20_schematic_w_circle-transistor.png?zoom=2&resize=780%2C456
 Then I check the documents about how a transistor work.
 Here are what I learnt:
 The whole circuit can be regard as a water flow system. The base is like a valve. Generally the channel between E to C is closed. We need to push the valve(B) to open the channel. 
